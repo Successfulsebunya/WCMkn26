@@ -1,0 +1,79 @@
+css is here safe will put it back /* For the default Gutenberg gallery block */
+.wp-block-gallery .wp-block-image {
+    width: 100% !important;
+}
+
+/* Glass look */
+.mocard{
+  backdrop-filter: blur(3px);
+}
+
+/* Gallery Hover Grow Effect */
+.wp-block-gallery .wp-block-image img {
+  transition: transform 0.3s ease;
+}
+
+.wp-block-gallery .wp-block-image:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.hdrgrp1{
+    position: relative; /* z-index requires a position value */
+    z-index: 3; /* A high value to place it on top */
+}
+
+/* Hide btn on Mobile */
+@media only screen and (max-width: 768px) {
+.mcbtnhide{
+display: none !important;
+}
+}
+
+.text-dance {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;} .text-dance:hover {
+    transform: scale(1.18);}
+
+.mc-img-dance{transition:transform 0.3s ease-in-out;}.mc-img-dance:hover{transform:scale(1.08);}
+
+p strong, li strong {
+  color: #005cde; /* Example: changes bold text color to blue */
+  font-weight: 600; /* Example: ensures bold text is extra bold, if the font supports it */
+  /* Add any other styles here */
+}
+
+/* 1. Define the Pulse Animation */
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Slightly grows */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 2. Target All Buttons Globally */
+.wp-block-button__link,
+.wp-element-button,
+button,
+input[type="button"],
+input[type="submit"] {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 3. Hover State: Pulse, Color, and Text */
+.wp-block-button__link:hover,
+.wp-element-button:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background-color: #330066 !important; /* Brand Deep Purple */
+  color: #ffffff !important;           /* White Text */
+  animation: pulse-animation 1s infinite; /* Continuous pulse while hovering */
+  cursor: pointer;
+  text-decoration: none;
+}
